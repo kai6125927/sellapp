@@ -13,3 +13,7 @@ export function seller(){
 export function goods(){
     return req.get("/api/goods")
 }
+
+export function ratings(){
+    return req.get("/api/ratings")
+}

@@ -32,11 +32,12 @@
     <!-- 路由 -->
     <div class="routerLink">
       <router-link to="goods">商品</router-link>
-      <router-link to="merchant">评价</router-link>
-      <router-link to="evaluate">商家</router-link>
+      <router-link to="evaluate">评价</router-link>
+      <router-link to="merchant">商家</router-link>
     </div>
     <router-view></router-view>
     <!-- 购物车 -->
+    <div style="height:50px"></div>
     <div class="shopCar">
         <div class="shopCarLeft">
             <div class="carImg"><img src="../assets/imgs/car.png"></div>
@@ -139,7 +140,8 @@ export default {
     display: flex;
     justify-content: space-around;
     font-size: 16px;
-    margin: 12px;
+    padding: 12px;
+    border: 1px solid #e9e9e9;
 }
 .shopCar{
     color: #93999c;

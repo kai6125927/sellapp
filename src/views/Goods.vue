@@ -2,12 +2,14 @@
   <div class="goods">
     <div class="goodsLeft">
       <ul class="content">
-        <div :class="{listLeft:true,bgfff:curIndex == i}" @click="checked(i)" v-for="(item,i) in list" :key="item.name">{{ item.name }}</div>
+          <div :class="{bgfff:curIndex == i}" @click="checked(i)" v-for="(item,i) in list" :key="item.name">
+        <div :class="{listLeft:true}">{{ item.name }}</div>
+      </div>
       </ul>
     </div>
     <div class="goodsRight">
       <ul class="content">
-          <div v-for="item in list" :key="item.name">
+          <div :id="index" v-for="(item,index) in list" :key="item.name">
         <h3>{{ item.name }}</h3>
         <div class="foodList" v-for="v in item.foods" :key="v.id">
           <img :src="v.icon" />
@@ -54,8 +56,7 @@ export default {
   methods:{
       checked(i){
           this.curIndex = i
-      console.log(this.curIndex);
-
+          this.goodsRight.scrollToElement(document.getElementById(i),600)  
       }
   }
 };
