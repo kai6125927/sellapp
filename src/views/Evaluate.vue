@@ -1,6 +1,6 @@
 <template>
   <div class="evaluate">
-    <div class="header">
+    <div class="evaluateHeader">
       <div class="bgfff">
         <div class="headerLeft">
           <p style="color:#fa9e02;fontSize:16px">{{(list.score+list.serviceScore)/2}}</p>
@@ -92,7 +92,7 @@ export default {
   background: #f4f5f7;
   height: 500px;
 }
-.header {
+.evaluateHeader {
   background: #fff;
   margin-bottom: 20px;
   .bgfff {
@@ -109,6 +109,9 @@ export default {
     .headerRight {
       padding: 0 12px;
       font-weight: bold;
+      .ivu-rate-star{
+        margin-right: 0;
+      }
     }
   }
 }
@@ -153,7 +156,7 @@ export default {
           justify-content: space-between;
         }
         .ivu-rate-star{
-          margin: 0;
+          margin-right: 0 !important;
           font-size: 16px;
         }
         .good{
